@@ -8,18 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>To-do list</title>
 </head>
 <body>
-    <h1>To-do list by tantal v0.1</h1>
-    <p>Today I need to:</p>
-    <form>
-        <label for="taskInput">Add a task:</label>
-        <input type="text" id="taskInput">
-        <button type="button" onclick="addTask()">Add</button>
-        <button type="button" onclick="resetTasks()">Reset</button>
-    </form>
+    <div class="wrapper">
+        <h1>To-do list by tantal v0.1</h1>
+        <p>Today I need to:</p>
 
-    <ul id="taskList"></ul>
+            <div class="form-input">
+                <input type="text" placeholder="Write a new task here!" id="taskInput">
+                <i class='bx bxs-edit-alt' style='color:#002b59'></i>
+            </div>
+            
+            <button type="button" class="btn-add" onclick="addTask()">Add</button>
+            <button type="button" class="btn-reset" onclick="resetTasks()">Reset</button>
+
+        <ul id="taskList"></ul>
+    </div>
 </body>
 </html>
