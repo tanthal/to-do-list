@@ -16,12 +16,17 @@
         <h1>To-do list by tantal v0.1</h1>
         <p>Today I need to:</p>
 
-            <div class="form-input">
-                <input type="text" placeholder="Write a new task here!" id="taskInput">
-                <i class='bx bxs-edit-alt' style='color:#002b59'></i>
+            <div class="input-wrapper">
+                <div class="form-wrapper">
+                    <input type="text" placeholder="Write a new task here!" id="taskInput">
+                    <i class='bx bxs-pencil bx-rotate-270' style='color:#002b59'></i>
+                </div>
+                <div class="add-btn-wrapper">
+                    <button type="button" class="btn-add" onclick="addTask()">
+                    <i class='bx bxs-plus-square' style='color:#002b59' ></i>
+                    </button>
+                </div>
             </div>
-            
-            <button type="button" class="btn-add" onclick="addTask()">Add</button>
             <button type="button" class="btn-reset" onclick="resetTasks()">Reset</button>
 
         <ul id="taskList"></ul>
