@@ -1,24 +1,23 @@
-//PL: funkcja dodająca tekst wpisany do formularza jako element listy
-//ENG: adding text written into the form as list element
+$(document).ready(function(){
+  
+  
+    $(".add-btn").click(function(){
+      var taskText = $(".task-input").val();
 
-function addTask() {
-    const formInput = document.getElementById("taskInput");
-    const formValue = formInput.value;
-    if (formValue) {
-        const taskList = document.getElementById("taskList");
-        const newTask = document.createElement("li");
-        newTask.textContent = formValue;
-        taskList.appendChild(newTask);
-        formInput.value = "";
-    }
-}
+      if (taskText != ""){
+        var newTask = $("<li>"+taskText+"</li>");
+        $(newTask).addClass("tp-cont");
+        $(".task-list").append(newTask);
+        $(".task-input").val("");
+      };
+    });
+    
+    $(document).on("dblclick", "li", function(){
+        $(this).remove();
+    });
 
-//PL: funkcja usuwająca wszystkie elementy listy
-//ENG: removing all list elements
-
-function resetTasks() {
-    const getList = document.getElementById("taskList");
-    while (getList.hasChildNodes()) {
-        getList.removeChild(getList.firstChild);
-    }
-}
+    $(document).on("click", "li", function(){
+        
+    });
+    
+  });
