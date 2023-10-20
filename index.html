@@ -10,14 +10,23 @@
 </head>
 <body>
     <div class="input-wrapper">
-        <h2>To-do list</h2>
-        <p><em>by tanthal</em></p>
-        <p class="testing"></p>
+        <div class="column">
+          <h2>To-do list</h2>
+          <p><em>by tanthal</em></p>
+        </div>
+        <div class="column">
+          <p class="lil"><em>Click to change a priority</em></p>
+          <p class="lil"><em>Right-click to complete a task</em></p>
+          <p class="lil"><em>Double click to remove a task</em></p>
+        </div>
         <input class="task-input" placeholder="Write here!" type="text"></input>
         <button class="add-btn" type="button">Add</button>
-    </div>
-    <div class="task-wrapper">
+      </div>
+      <div class="task-wrapper">
         <ul class="task-list"></ul>
-    </div>
+      </div>
+      <div class="compl-wrapper">
+        <ul class="compl-list"></ul>
+      </div>
 </body>
 </html>

@@ -1,59 +1,119 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   
-html {
+  html {
     height: 100vh;
-    background-image: linear-gradient(#00802b, #00b33c)
-}
+    background-color: #00802b;
+  }
   
-.input-wrapper {
+  .input-wrapper {
     padding: 10px;
     width: 400px;
     margin: 0 auto;
     margin-top: 20px;
     background: white;
     border-radius: 10px;
+    font-family: sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7)
-}
+  }
   
-.input-wrapper > p {
+  .column {
+    float: left;
+    width: 50%;
     margin-bottom: 5px;
-}
+  }
   
-.task-input {
+  .lil {
+    font-size: 10px;
+    text-align: right;
+  }
+  
+  .task-input {
     display: inline-block;
     padding: 10px;
     width: 300px;
-}
+  }
   
-.add-btn {
+  .add-btn {
     display: inline-block;
     margin-left: 10px;
     padding: 10px 15px;
     border: none;
     background-color: #00b33c;
     color: white;
-}
+  }
   
-.add-btn:hover {
+  .add-btn:hover {
     cursor: pointer;
     background-color: #01872e;
-}
+  }
   
-.task-wrapper > ul > li{
+  .task-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-wrapper > ul > li{
     list-style: none;
     padding: 10px;
     width: 400px;
     margin: 0 auto;
     margin-top: 12px;
-    background: white;
+    font-family: sans-serif;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7)
-}
+  }
   
-.task-wrapper > ul > li:hover {
-    opacity: 0.8;
-}
+  .task-wrapper > ul > li:hover {
+    opacity: 0.9;
+  }
+  
+  .pr-high {
+    background-color: #ff9999;
+    color: #990000;
+    border-left: 5px solid red;
+    font-weight: bold;
+    order: 1;
+  }
+  
+  .pr-medium {
+    background-color: #ffd699;
+    color: #995c00;
+    border-left: 5px solid orange;
+    order: 2;
+  }
+  
+  .pr-low {
+    background-color: #e6e6e6;
+    border-left: 5px solid grey;
+    order: 3;
+  }
+  
+  .compl-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .compl-wrapper > ul > li{
+    list-style: none;
+    padding: 10px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 12px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  .done {
+    background-color: #c6ecc6;
+    border-left: 5px solid #009933;
+    text-decoration: line-through;
+    color: #006600;
+  }
